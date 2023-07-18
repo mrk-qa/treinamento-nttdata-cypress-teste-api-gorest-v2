@@ -1,25 +1,129 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('get_all_users', () => {
+    cy.api({
+        method: 'GET',
+        url: '/users',
+        headers: {
+            Authorization: Cypress.env('token')
+        }
+    })
+})
+
+Cypress.Commands.add('get_user_filter_id', () => {
+    cy.api({
+        method: 'GET',
+        url: '/users/3681821',
+        headers: {
+          Authorization: Cypress.env('token')
+        }
+    })
+})
+
+Cypress.Commands.add('get_user_filter_name', () => {
+    cy.api({
+        method: 'GET',
+        url: '/users',
+        headers: {
+          Authorization: Cypress.env('token')
+        },
+        qs: {
+          name: 'Nimit Mahajan'
+        }
+    })
+})
+
+Cypress.Commands.add('get_user_filter_email', () => {
+    cy.api({
+        method: 'GET',
+        url: '/users',
+        headers: {
+          Authorization: Cypress.env('token')
+        },
+        qs: {
+          email: 'nimit_mahajan@runolfsdottir.test'
+        }
+    })
+})
+
+Cypress.Commands.add('get_user_filter_gender', () => {
+    cy.api({
+        method: 'GET',
+        url: '/users',
+        headers: {
+          Authorization: Cypress.env('token')
+        },
+        qs: {
+          gender: 'female'
+        }
+    })
+})
+
+Cypress.Commands.add('get_user_filter_status', () => {
+    cy.api({
+        method: 'GET',
+        url: '/users',
+        headers: {
+          Authorization: Cypress.env('token')
+        },
+        qs: {
+          status: 'active'
+        }
+    })
+})
+
+Cypress.Commands.add('get_all_comments', () => {
+    cy.api({
+        method: 'GET',
+        url: '/comments',
+        headers: {
+          Authorization: Cypress.env('token')
+        }
+    })
+})
+
+Cypress.Commands.add('get_all_posts', () => {
+    cy.api({
+        method: 'GET',
+        url: '/posts',
+        headers: {
+          Authorization: Cypress.env('token')
+        }
+    })
+})
+
+Cypress.Commands.add('get_all_todos', () => {
+    cy.api({
+        method: 'GET',
+        url: '/todos',
+        headers: {
+          Authorization: Cypress.env('token')
+        },
+    })
+})
+
+Cypress.Commands.add('post_user', () => {
+    cy.api({
+        method: 'POST',
+        url: '/users',
+        headers: {
+          Authorization: Cypress.env('token')
+        },
+        body: {
+          name: 'Natalia NTT',
+          gender: 'female',
+          email: 'nat.ntt2@teste.com.br',
+          status: 'inactive'
+        }
+    }).then((response) => {
+        Cypress.env('user_id', response.body.id)
+    })
+})
+
+Cypress.Commands.add('del_user', () => {
+    cy.api({
+        method: 'DELETE',
+        url: `/users/${Cypress.env('user_id')}`,
+        headers: {
+          Authorization: Cypress.env('token')
+        },
+    })
+})
