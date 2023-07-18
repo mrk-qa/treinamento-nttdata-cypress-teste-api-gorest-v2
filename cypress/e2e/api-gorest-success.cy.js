@@ -23,7 +23,7 @@ describe('Testes API GOREST - Cenários Positivos', () => {
       expect(response.status).to.eq(200)
       expect(response.body).not.empty
       expect(response.body[0]).to.have.all.keys('id', 'name', 'email', 'gender', 'status')
-      expect(response.body[0].name).to.include('Nimit Mahajan')
+      expect(response.body[0].name).to.include('Sukanya Deshpande')
     })
   })
 
@@ -90,7 +90,16 @@ describe('Testes API GOREST - Cenários Positivos', () => {
     })
   })
 
-  it('[CT11] DELETE - Excluir usuário', () => {
+  it('[CT11] PUT - Alterar dados do usuário', () => {
+    cy.put_user()
+      .should((response) => {
+      expect(response.status).to.eq(200)
+      expect(response.body).not.empty
+      expect(response.body).to.have.all.keys('email', 'name', 'gender', 'status', 'id')
+    })
+  })
+
+  it('[CT12] DELETE - Excluir usuário', () => {
     cy.del_user()
     .should((response) => {
       expect(response.status).to.eq(204)
