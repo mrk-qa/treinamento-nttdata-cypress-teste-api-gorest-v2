@@ -20,6 +20,7 @@
   "homepage": "https://github.com/mrk-qa/treinamento-nttdata-cypress-teste-api-gorest-v2#readme",
   "devDependencies": {
     "cypress": "^12.2.0",
-    "cypress-plugin-api": "^2.11.1"
+    "cypress-plugin-api": "^2.11.1",
+    "cypress-plugin-steps": "^1.1.1"
   }
 }
