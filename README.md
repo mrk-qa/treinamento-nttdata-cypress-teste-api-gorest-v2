@@ -55,8 +55,8 @@ Em seguida, execute `npx cypress open` para abrir a interface do Cypress ou exec
 <p align="center">Abaixo uma recordação dos participantes do treinamento 💙</p>
 <p align="center">Treinamento realizado em 17 a 19 de Julho/2023.</p>
 
-<!-- <div align="center"><img width="600px"  src="https://user-images.githubusercontent.com/102618854/209017808-f185acc8-85f3-4ba5-853b-8dd4b1ffbe9f.png">
-</div> -->
+<div align="center"><img width="600px"  src="https://github.com/mrk-qa/treinamento-nttdata-cypress-teste-api-gorest-v2/assets/102618854/96bc71bb-623b-459b-b9d3-cd2341f814fe">
+</div>
 
 
 ## 🔮 Apoie este projeto  
