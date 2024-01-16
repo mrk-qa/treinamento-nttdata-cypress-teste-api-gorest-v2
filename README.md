@@ -1,7 +1,7 @@
 # Treinamento para QAs - Automação de Testes de API utilizando Cypress - Básico V2 🚀
 
 <h1 align="left">
-    <img width="300px" src="https://i.ibb.co/qnhR4sx/2560px-NTT-Data-Logo.png" alt="2560px-NTT-Data-Logo">
+    <img width="300px" src="https://github.com/mrk-qa/treinamento-nttdata-cypress-teste-api-gorest-v2/blob/6036fa68f607a287c9874e3136bee532c5bfb914/assets/ntt_logo.png" alt="2560px-NTT-Data-Logo">
 </h1>
 
 
@@ -55,7 +55,7 @@ Em seguida, execute `npx cypress open` para abrir a interface do Cypress ou exec
 <p align="center">Abaixo uma recordação dos participantes do treinamento 💙</p>
 <p align="center">Treinamento realizado em 19, 20 e 21 (Turma 1) e 26, 27 e 28 (Turma 2) de Julho/2023</p>
 
-<div align="center"><img width="600px"  src="https://github.com/mrk-qa/treinamento-nttdata-cypress-teste-api-gorest-v2/assets/102618854/96bc71bb-623b-459b-b9d3-cd2341f814fe">
+<div align="center"><img width="800px"  src="https://github.com/mrk-qa/treinamento-nttdata-cypress-teste-api-gorest-v2/blob/6036fa68f607a287c9874e3136bee532c5bfb914/assets/treinamento-nttdata-cypress-teste-api-gorest-v2.jpeg">
 </div>
 
 
